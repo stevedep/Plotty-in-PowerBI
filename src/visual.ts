@@ -164,7 +164,8 @@ export class Visual implements IVisual {
             //el.attributes[0].ownerElement["sid"] = "";
             d[i].addEventListener('click', function emit(event) {
                 //this.attributes[0].ownerElement.__data__.setAttribute( "id",  "test" );
-                console.log(this.attributes[0].ownerElement.__data__);
+                console.log(this.attributes[0].ownerElement.sid);
+                selectionManager.select(this.attributes[0].ownerElement["sid"]);
             });
         };
 
